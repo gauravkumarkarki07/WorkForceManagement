@@ -31,7 +31,10 @@ export default function Login() {
     }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 px-4 py-4">
+    <div className="w-full flex justify-center items-center py-20">
+
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 px-4 py-4 w-[60%]">
+        <h1 className="text-2xl font-semibold text-blue-800">Login with your credentials</h1>
         <div className="flex flex-col gap-2">
             <label>Username Or Email *</label>
             <input
@@ -64,5 +67,7 @@ export default function Login() {
             </Link>
         </div>
     </form>
+    </div>
+
   )
 }

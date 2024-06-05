@@ -8,7 +8,7 @@ export default defineConfig({
     proxy:{
       '/api':{
         target:'https://workforcemanagement.onrender.com',
-        secure:false
+        secure:true
       }
     }
   }

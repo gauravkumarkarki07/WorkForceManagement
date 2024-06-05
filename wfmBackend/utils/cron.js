@@ -3,7 +3,7 @@ import https from 'https';
 
 const URL="https://workforcemanagement.onrender.com/"
 
-const job = new cron.CronJob("*/1 * * * *",function(){
+const job = new cron.CronJob("*/15 * * * *",function(){
     https
         .get(URL,(res)=>{
             if(res.statusCode===200){

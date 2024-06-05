@@ -32,7 +32,10 @@ export default function RegisterUser() {
     }
 
   return (
+    <div className="w-full flex justify-center items-center py-14">
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 px-4 py-4">
+    <h1 className="text-2xl font-semibold text-blue-800">Register your account</h1>
+    <span className="text-gray-500">Only after admin verifies your account, you will be able to use the system</span>
       <div className="flex gap-2">
         <div className="flex flex-col gap-2 w-full">
             <label>First Name *</label>
@@ -124,5 +127,6 @@ export default function RegisterUser() {
             </Link>
         </div>
     </form>
+    </div>
   )
 }

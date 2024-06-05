@@ -7,6 +7,8 @@ import Header from './Header.jsx';
 import PrivateAdmin from './PrivateAdmin.jsx';
 import AdminDashboard from '../pages/AdminDashboard.jsx';
 import AddEmployee from '../pages/AddEmployee.jsx';
+import Unauthorized from '../pages/Unauthorized.jsx';
+import PrivateEmplpoyee from '../components/PrivateEmployee.jsx';
 
 export default function LayoutPage() {
   return (
@@ -23,7 +25,10 @@ export default function LayoutPage() {
             <Route path="/users" element={<Users/>} />
             <Route path="/addemployee" element={<AddEmployee/>} />
           </Route>
-        <Route path="/dashboard" element={<Dashboard />} />
+          <Route element={<PrivateEmplpoyee/>}>
+              <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+        <Route path="/unauthorized" element={<Unauthorized/>} />
         </Routes>
       </div>
     </div>

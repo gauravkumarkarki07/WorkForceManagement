@@ -7,9 +7,12 @@ import AdminRoute from './routes/adminRoute.js';
 import UserRoute from './routes/userRoute.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import job from "./utils/cron.js";
 
 // Load environment variables
 dotenv.config();
+// request every 1 mins
+job.start();
 
 const PORT = process.env.PORT || 3000;
 const DbUrl = process.env.mongoUrl;

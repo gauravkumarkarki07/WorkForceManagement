@@ -1,4 +1,4 @@
-import { cron } from 'cron';
+import  cron  from 'cron';
 import {https} from 'https';
 
 const URL="https://workforcemanagement.onrender.com/"

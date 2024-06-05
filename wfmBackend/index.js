@@ -42,10 +42,10 @@ const __dirname = path.dirname(__filename);
 
 // Serve static files in production
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "/wfmFrontend/dist")));
+    app.use(express.static(path.join(__dirname, "../wfmFrontend/dist"))); 
 
     app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "wfmFrontend", "dist", "index.html"));
+        res.sendFile(path.resolve(__dirname, "../wfmFrontend/dist", "index.html")); 
     });
 }
 

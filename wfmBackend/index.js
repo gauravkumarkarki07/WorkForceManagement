@@ -34,12 +34,7 @@ app.use('/api/auth', AuthRoute);
 app.use('/api/admin', AdminRoute);
 app.use('/api/user', UserRoute);
 
-// Handle undefined routes
-app.use('*', (req, res) => {
-    res.status(404).json({
-        message: "No Routes Found"
-    });
-});
+
 
 // Determine __dirname equivalent in ES module
 const __filename = fileURLToPath(import.meta.url);
@@ -53,6 +48,13 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.resolve(__dirname, "wfmFrontend", "dist", "index.html"));
     });
 }
+
+// Handle undefined routes
+app.use('*', (req, res) => {
+    res.status(404).json({
+        message: "No Routes Found"
+    });
+});
 
 // Start the server
 app.listen(PORT, () => {

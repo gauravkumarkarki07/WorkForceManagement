@@ -46,6 +46,9 @@ export default function EmployeeDetailsTable({ employees }) {
                   <Button variant={'secondary'} type="button" action={(e)=>NavigateToAddEmployee(e,employee)}>
                     View
                   </Button>
+                  <Button variant={'danger'} type="button">
+                    Terminate
+                  </Button>
                 </div>
               </td>
             </tr>

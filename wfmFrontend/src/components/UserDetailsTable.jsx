@@ -45,8 +45,11 @@ export default function UserDetailsTable({ users }) {
               <td className="truncate">{user.isAdmin ? 'Yes' : 'No'}</td>
               <td>
                 <div className="flex gap-2 w-full justify-center">
-                    <Button variant={'secondary'} type="button" action={(e)=>NavigateToAddEmployee(e,user)}>
-                        View
+                      <Button variant={'primary'} type="button" action={(e)=>NavigateToAddEmployee(e,user)}>
+                         Add Employee
+                      </Button>
+                      <Button variant={'danger'} type="button">
+                      Delete User
                     </Button>
                 </div>
               </td>

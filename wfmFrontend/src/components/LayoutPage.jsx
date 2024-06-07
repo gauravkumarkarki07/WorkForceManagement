@@ -9,6 +9,9 @@ import AdminDashboard from '../pages/AdminDashboard.jsx';
 import AddEmployee from '../pages/AddEmployee.jsx';
 import Unauthorized from '../pages/Unauthorized.jsx';
 import PrivateEmplpoyee from '../components/PrivateEmployee.jsx';
+import Rostering from '../pages/Rostering.jsx';
+import Profile from '../pages/Profile.jsx';
+import LeaveManagement from '../pages/LeaveManagement.jsx';
 
 export default function LayoutPage() {
   return (
@@ -24,11 +27,14 @@ export default function LayoutPage() {
             <Route path="/employees" element={<Employees />} />
             <Route path="/users" element={<Users/>} />
             <Route path="/addemployee" element={<AddEmployee/>} />
+            <Route path="/rostering" element={<Rostering/>} />
           </Route>
           <Route element={<PrivateEmplpoyee/>}>
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/leavemanagement" element={<LeaveManagement />} />
           </Route>
         <Route path="/unauthorized" element={<Unauthorized/>} />
+        <Route path="/profile" element={<Profile/>} />
         </Routes>
       </div>
     </div>

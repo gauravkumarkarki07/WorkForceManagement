@@ -7,6 +7,8 @@ import { FaUsers } from "react-icons/fa6";
 import { MdSpaceDashboard } from "react-icons/md";
 import { AiFillSchedule } from "react-icons/ai";
 import { IoLogOut } from "react-icons/io5";
+import { ImProfile } from "react-icons/im";
+import { MdOutlineTimeToLeave } from "react-icons/md";
 
 import { useSelector } from 'react-redux';
 
@@ -43,7 +45,7 @@ export default function SideNavBar() {
           <Link to={'/employees'} className='hover:underline'>
             <ul className='flex gap-2 items-center'><FaUsers/>Manage Employees</ul>
           </Link>
-          <Link to={'/rosteringandscheduling'} className='hover:underline'>
+          <Link to={'/rostering'} className='hover:underline'>
             <ul className='flex gap-2 items-center'><AiFillSchedule/>Roster & Scheduling</ul>
           </Link>
           </>
@@ -54,7 +56,12 @@ export default function SideNavBar() {
         )
 
         }
-
+        <Link to={'/leavemanagement'} className='hover:underline'>
+            <ul className='flex gap-2 items-center'><MdOutlineTimeToLeave/>Leave Request</ul>
+          </Link>
+          <Link to={'/profile'} className='hover:underline'>
+            <ul className='flex gap-2 items-center'><ImProfile/>Profile</ul>
+          </Link>
         <Link onClick={logout} className='hover:underline'>
           <ul className='flex gap-2 items-center'><IoLogOut/>Logout</ul>
         </Link>
